@@ -1,0 +1,742 @@
+@import 'public/base';
+@font-face{
+	font-family: myFirstFont;
+	src: url('../font/hiragino.otf')
+}
+body.sgo-login{
+	height: auto;
+    background:url(../images/login_bg.jpg) no-repeat center fixed;
+    @include background-size(cover);
+}
+.warpper{
+	margin:0 auto;
+	width:100%;
+	height:100%;
+}
+.header{
+	width:100%;
+	height:62px;
+	background:rgba(43,43,43,.5);
+	overflow:hidden;
+	.logo{
+		float:left;
+		padding-top: 13px;
+		width:122px;
+		height:62px;
+		background-color:#2b2b2b;
+		.img{
+		    margin: 0 auto;
+			width:54px;
+			height:36px;
+			background:url("../images/sgo_icon.png") 0 0 no-repeat;
+		}
+	}
+	.right{
+		float:right;
+		margin-right:40px;
+		p{
+			margin-top:7px;
+			float:left;
+			i{
+				margin-top:12px;
+				float:left;
+				display:inline-block;
+				width:22px;
+				height:22px;
+				background:url("../images/sgo_icon.png") -60px 0 no-repeat;
+			}
+			span{
+				float:left;
+				margin-left:15px;
+				font:18px/48px myFirstFont, $publicFont;
+				color:#fff;
+			}
+		}
+		>a{
+			margin-left:36px;
+		}
+		.setting{
+			margin-top:23px;
+			float:left;
+			display:inline-block;
+			width:16px;
+			height:17px;
+			background:url("../images/sgo_icon.png") -87px 0 no-repeat;
+		}
+		.close{
+			margin-top:22px;
+			float:left;
+			display:inline-block;
+			width:18px;
+			height:18px;
+			background:url("../images/sgo_icon.png") -111px 0 no-repeat;
+		}
+	}
+}
+.login-content{
+	margin:0 auto;
+	width:100%;
+}
+.login-content-text{
+	float:right;
+	.head{
+		overflow:hidden;
+		padding-right:104px;
+		p{
+			font:12px/2 myFirstFont, $publicFont;
+			color:#fff;
+			text-align:right;
+		}
+		img{
+		    float: right;
+			width:356px;
+			height:57px;
+		}
+	}
+	.middle{
+		height:auto;
+		overflow:hidden;
+		margin:15px 0;
+		>i{
+			margin:20px 20px 0 0;
+			float:left;
+		}
+		.arrow{
+			display:inline-block;
+			width:23px;
+			height:38px;
+			background:url("../images/sgo_icon.png") -135px 0 no-repeat;
+		}
+		.cell{
+			display:inline-block;
+			width:40px;
+			height:40px;
+			background:url("../images/sgo_icon.png") -168px 0 no-repeat;
+		}
+		.login{
+			float:left;
+			width:1154px;
+			height:auto;
+			.top{
+				background:rgba(43,43,43,.8);
+				overflow:hidden;
+				.hotel{
+					float:left;
+					margin:16px 0  0 40px;
+					display:inline-block;
+					width:52px;
+					height:52px;
+					background:url("../images/sgo_icon.png") -212px 0 no-repeat;
+				}
+				.icon{
+					float:left;
+					margin:25px 0 0 30px;
+					display:inline-block;
+					width:532px;
+					height:33px;
+					background:url("../images/sgo_icon.png") 0 -57px no-repeat;
+				}
+				span{
+					float:left;
+					margin:0 0  0 40px;
+					display:inline-block;
+					font:18px/86px myFirstFont, $publicFont;
+					color:#fff;
+				}
+				ul{
+					margin-top:10px;
+					float:left;
+					overflow: hidden;
+					li{
+						float:left;
+						width:66px;
+						height:66px;
+						margin-left:20px;
+						cursor:pointer;
+						i{
+							display:inline-block;
+							width:66px;
+							height:66px;
+							background:url("../images/list.png") no-repeat;
+						}
+						i.a{background-position:1px 5px;}
+						i.b{background-position:-86px 5px;}
+						i.c{background-position:-171px 5px;}
+						i.d{background-position:-257px 5px;}
+						i.e{background-position:-344px 5px;}
+					}
+					li.on{
+						i{
+							border-radius:100%;
+							overflow:hidden;
+						}
+						i.a{background-position:-1px -75px;}
+						i.b{background-position:-88px -75px;}
+						i.c{background-position:-172px -75px;}
+						i.d{background-position:-259px -75px;}
+						i.e{background-position:-345px -75px;}
+					}
+				}
+				p{
+					float:right;
+					display:inline-block;
+					font:72px/1.2 myFirstFont, $publicFont;
+					color:#fff;
+					margin-right:108px;
+				}
+			}
+			.bottom{
+				padding:32px 0;
+				margin-top:2px;
+				background:rgba(43,43,43,.8);
+				overflow:hidden;
+				height:auto;
+				>div{
+					float:left;
+				}
+				.user-login{
+					margin-left:40px;
+					.l{
+						float:left;
+						display:inline-block;
+						width:52px;
+						height:52px;
+						background:url("../images/sgo_icon.png") -270px 0 no-repeat;
+					}
+					label{
+						margin:6px 15px 0 15px;
+						float:left;
+						display:inline-block;
+						border-bottom:1px solid #fff;
+						font-size:0;
+						height:40px;
+						input{
+							background:none;
+							border:none;
+							outline:none;
+							width:100%;
+							height:100%;
+							font:18px/40 pxmyFirstFont, $publicFont;
+							color:#fff;
+							&::-webkit-input-placeholder{
+								font:18px/40 pxmyFirstFont, $publicFont;
+								color:#fff;
+							}
+						}
+					}
+					.r{
+						margin-top:10px;
+						float:left;
+						display:inline-block;
+						width:31px;
+						height:32px;
+						background:url("../images/sgo_icon.png") -326px 0 no-repeat;
+					}
+				}
+				.password{
+					margin-left:40px;
+					.l{
+						float:left;
+						display:inline-block;
+						width:52px;
+						height:52px;
+						background:url("../images/sgo_icon.png") -361px 0 no-repeat;
+					}
+					label{
+						margin:6px 15px 0 15px;
+						float:left;
+						display:inline-block;
+						border-bottom:1px solid #fff;
+						font-size:0;
+						height:40px;
+						input{
+							background:none;
+							border:none;
+							outline:none;
+							width:100%;
+							height:100%;
+							font:18px/40 pxmyFirstFont, $publicFont;
+							color:#fff;
+							&::-webkit-input-placeholder{
+								font:18px/40 pxmyFirstFont, $publicFont;
+								color:#fff;
+							}
+						}
+					}
+					.r{
+						margin-top:13px;
+						float:left;
+						display:inline-block;
+						width:25px;
+						height:25px;
+						background:url("../images/sgo_icon.png") -420px 0 no-repeat;
+					}
+				}
+				.btn{
+					margin-left:40px;
+					width:290px;
+					height:52px;
+					border-radius:5px;
+					@include box-shadow(0px 4px 0px #ff9602);
+					filter:alpha(opacity=100 finishopacity=50 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#ff8b52,endcolorstr=#f7ac20,gradientType=0);
+				    -ms-filter:alpha(opacity=100 finishopacity=50 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#ff8b52,endcolorstr=#f7ac20,gradientType=0);/*IE8*/	
+				    background:#f7ac20; /* 一些不支持背景渐变的浏览器 */  
+				    background:-moz-linear-gradient(top, #ff8b52, #f7ac20);  
+				    background:-webkit-gradient(linear, 0 0, 0 bottom, from(#ff8b52), to(#f7ac20));  
+				    background:-o-linear-gradient(top, #ff8b52, #f7ac20); 
+				    a{
+				    	display:block;
+				    	font:24px/54px pxmyFirstFont, $publicFont;
+						color:#fff;
+						text-align:center;
+				    }
+				}
+				.code{
+					margin-top:-32px;
+					float:right;
+					width:50px;
+					height:50px;
+					background:url("../images/sgo_icon.png") -450px 0 no-repeat;
+				}
+			}
+		}
+	}
+	.foot{
+	    float: right;
+	    overflow:hidden;
+		padding-right:104px;
+		#weather {
+			color:#FFF;
+			i { 
+				float:left;
+				display:inline-block;
+				background: no-repeat top left; 
+				font:30px/1 myFirstFont, $publicFont;
+				height:30px; 
+				line-height:30px; 
+				padding-left:36px; 
+				text-align:center; 
+				background-size: contain; 
+			}
+			i.icon-xiaoyu { background-image:url("../images/xiaoyu.png"); }
+			i.icon-zhongyu { background-image:url("../images/zhongyu.png"); }
+			i.icon-dayu { background-image:url("../images/dayu.png"); }
+			i.icon-qing { background-image:url("../images/qing.png"); }
+			i.icon-duoyun { background-image:url("../images/duoyun.png"); }
+			i.icon-yin { background-image:url("../images/yin.png"); }
+			p { 
+				float:left;
+				display:inline-block;
+				font:16px/30px myFirstFont, $publicFont;
+			}
+			p span { 
+				margin:0 10px; 
+			}
+		}	
+	}
+}
+.footer{
+	width:100%;
+	height:140px;
+	background:rgba(43,43,43,.8);
+	.footer-content{
+		padding-top:10px;
+		margin:0 auto;
+		width:1286px;
+		>div{
+			display:inline-block;
+		}
+		.left{
+			float:left;
+			margin-right:158px;
+			width:936px;
+			.map-list{
+				padding:10px 0;
+				border-bottom:1px solid rgba(255,255,255,.2);
+				>div{display:inline-block;}
+				.text{
+					margin-left:40px;
+					>div{
+						display:inline-block;
+						float:left;
+					}
+					.phone-icon{
+						width:31px;
+						height:31px;
+						background:url("../images/sgo_icon.png") -175px -103px no-repeat;
+					}
+					.download-icon{
+						width:31px;
+						height:31px;
+						background:url("../images/sgo_icon.png") -206px -103px no-repeat;
+					}
+					.cooperate-icon{
+						width:31px;
+						height:31px;
+						background:url("../images/sgo_icon.png") -238px -103px no-repeat;
+					}
+					.about-icon{
+						width:31px;
+						height:31px;
+						background:url("../images/sgo_icon.png") -269px -103px no-repeat;
+					}
+					.content{
+						margin-left:10px;
+						p{
+							font:14px/24px myFirstFont, $publicFont;
+							color:#fff;
+							>a{
+								display:inline-block;
+								margin-right:15px;
+							}
+						}
+						a{
+							font:14px/24px myFirstFont, $publicFont;
+							color:#fff;
+							display:block;
+							text-decoration:none;
+						}
+					}
+				}
+				.logo{
+					width:167px;
+					height:57px;
+					background:url("../images/sgo_icon.png") 0 -103px no-repeat;
+				}
+			}
+			>p{
+				font:12px/48px myFirstFont, $publicFont;
+				color:#58595b;
+			}
+		}
+		.right{
+			float:right;
+			width:192px;
+			>div{display:inline-block;}
+			.code{
+				float:right;
+				font-size:0;
+				p{
+					position:relative;
+					padding-left:8px;
+					font:14px/36px myFirstFont, $publicFont;
+					color:#fff;
+					&:before{
+						position: absolute;
+					    top: 10px;
+					    left: 0;
+						content:"";
+						width:4px;
+						height:14px;
+						background-color:#f6ac1d;
+					}
+				}
+				.img{
+					font-size:0;
+				}
+				&:last-child{
+					margin-right:36px;
+				}
+			}
+		}
+	}
+}
+
+// .select-hotel-content-text{
+// 	.left{
+// 		position:fixed;
+// 		top:50%;
+// 		left:2px;
+// 		margin-top:-130px;
+// 		>div{
+// 			width:84px;
+// 			background:rgba(43,43,43,.8);
+// 		}
+// 		.l-top{height:86px;}
+// 		.l-bottom{margin-top:2px;height:126px;}
+// 	}
+// }
+// .shct{
+// 	margin:0 auto;
+// 	width:1148px;
+// 	.shct-top{
+// 		padding:13px 25px;
+// 		height:74px;
+// 		background:rgba(43,43,43,.8);
+// 		overflow:hidden;
+// 		p{
+// 			float:left;
+// 			overflow:hidden;
+// 			i{
+// 				float:left;
+// 				margin-top:14px;
+// 				display:inline-block;
+// 				width:12px;
+// 				height:19px;
+// 				background:url("../images/sgo_icon.png") -306px -103px no-repeat;
+// 			}
+// 			span{
+// 				float:left;
+// 				margin-left:10px;
+// 				display:inline-block;
+// 				font:18px/48px myFirstFont, $publicFont;
+// 				color:#fff;	
+// 			}
+// 		}
+// 		label{
+// 			padding:0 10px;
+// 			margin-top:9px;
+// 			float:right;
+// 			width:420px;
+// 			height:28px;
+// 			border:1px solid #fff;
+// 			border-radius:5px;
+// 			background:rgba(245,245,245,.1);
+// 			overflow:hidden;
+// 			input{
+// 				float:left;
+// 				width:380px;
+// 				height:100%;
+// 				background:none;
+// 				border:none;
+// 				outline:none;
+// 				font:14px/1 myFirstFont, $publicFont;
+// 				color:#fff;
+// 				&::-webkit-input-placeholder{
+// 					font:14px/1 myFirstFont, $publicFont;
+// 					color:#fff;
+// 				}
+// 			}
+// 			i{
+// 				margin-top:5px;
+// 				float:left;
+// 				width:17px;
+// 				height:16px;
+// 				background:url("../images/sgo_icon.png") -329px -103px no-repeat;
+// 				cursor: pointer;
+// 			}
+// 		}
+// 	}
+// 	.shct-bottom{
+// 		position:relative;
+// 		margin-top:2px;
+// 		height:459px;
+// 		overflow:hidden;
+// 		.shct-bottom-content{
+// 			padding:50px 10px 150px;
+// 			background:rgba(43,43,43,.8);
+// 		}
+// 		.hote-list{
+// 			padding:0 120px;
+// 			max-height:257px;
+// 			overflow-y:scroll;
+// 			&::-webkit-scrollbar{
+// 			    width: 10px;
+// 			    height: 12px;
+// 			    background-color:transparent;
+// 			} 
+// 			&::-webkit-scrollbar-track{
+// 				-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.1);
+// 			    border-radius: 10px;
+// 			    background:transparent;
+// 			}
+// 			&::-webkit-scrollbar-thumb{
+// 			    width: 10px;
+// 			    border-radius: 10px;
+// 			    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+// 			    background-color: #58595b;
+// 			}
+// 			& ::-webkit-scrollbar-button {
+// 				background:url("../images/sgo_icon.png") -450px 0 no-repeat;
+// 				width:10px;
+// 				height:10px;
+// 			}
+// 			ul{
+// 				overflow:hidden;
+// 				li{
+// 					margin:0 90px 40px 10px;
+// 					float:left;
+// 					width:216px;
+// 					height:56px;
+// 					overflow:hidden;
+// 				    cursor: pointer;
+// 					&:nth-child(3n){
+// 						margin-right:0;
+// 					}
+// 					i{
+// 						float:left;
+// 						display:inline-block;
+// 						width:54px;
+// 						height:54px;
+// 						background:url("../images/sgo_icon.png") -359px -103px no-repeat;
+// 					}
+// 					p{
+// 						margin-left:64px;
+// 						font:18px/28px pxmyFirstFont, $publicFont;
+// 						color:#fff;
+// 					}
+// 				}
+// 				li.active{
+// 					i{
+// 						background:url("../images/sgo_icon.png") -417px -103px no-repeat;
+// 					}
+// 					p{
+// 						color:#f6ac1d;
+// 					}
+// 				}
+// 			} 
+// 		}
+// 		.btn{
+// 			position:absolute;
+// 			left:50%;
+// 			bottom:50px;
+// 			margin-left:-145px;
+// 			width:290px;
+// 			height:52px;
+// 			border-radius:5px;
+// 			@include box-shadow(0px 4px 0px #ff9602);
+// 			filter:alpha(opacity=100 finishopacity=50 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#ff8b52,endcolorstr=#f7ac20,gradientType=0);
+// 		    -ms-filter:alpha(opacity=100 finishopacity=50 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#ff8b52,endcolorstr=#f7ac20,gradientType=0);/*IE8*/	
+// 		    background:#f7ac20; /* 一些不支持背景渐变的浏览器 */  
+// 		    background:-moz-linear-gradient(top, #ff8b52, #f7ac20);  
+// 		    background:-webkit-gradient(linear, 0 0, 0 bottom, from(#ff8b52), to(#f7ac20));  
+// 		    background:-o-linear-gradient(top, #ff8b52, #f7ac20); 
+// 		    a{
+// 		    	display:block;
+// 		    	font:24px/54px pxmyFirstFont, $publicFont;
+// 				color:#fff;
+// 				text-align:center;
+// 		    }	
+// 		}
+// 	}
+// }
+
+// .ststm-content-text{
+// 	float:inherit;
+// 	.head{
+// 		padding-right:15%;
+// 	}
+// 	.foot{
+// 		padding-right:15%;
+// 	}
+// }
+// .login-content-text .ststm-list{
+// 	width:100%;
+// 	height:210px;
+// 	overflow:hidden;
+// 	.left{
+// 		padding-top:13px;
+// 		float:left;
+// 		background:rgba(43,43,43,.8);
+// 		width:85%;
+// 		height:210px;
+// 		ul{
+// 			margin:0 auto;
+// 			width:950px;
+// 			li{
+// 				padding:15px 0;
+// 				width:190px;
+// 				float:left;
+// 				overflow: hidden;
+// 				i{
+// 					float:left;
+// 					width:62px;
+// 					height:62px;
+// 					background:url("../images/sgo_icon.png") no-repeat;
+// 				}
+// 				i.i1{background-position:5px -167px;}
+// 				i.i2{background-position:-56px -167px;}
+// 				i.i3{background-position:-115px -167px;}
+// 				i.i4{background-position:-175px -167px;}
+// 				i.i5{background-position:-236px -167px;}
+// 				i.i6{background-position:5px -231px;}
+// 				i.i7{background-position:-55px -231px;}
+// 				i.i8{background-position:-115px -231px;}
+// 				i.i9{background-position:-175px -231px;}
+// 				p{
+// 					margin-left:10px;
+// 					float:left;
+// 					font:18px/62px pxmyFirstFont, $publicFont;
+// 					color:#fff;
+// 				}
+// 			}
+// 			li.active{
+// 				i{
+// 					background:url("../images/sgo_icon.png") no-repeat;
+// 					border-radius:100%;
+// 					overflow:hidden;
+// 				}
+// 				i.i1{background-position:1px -303px;}
+// 				i.i2{background-position:-67px -303px;}
+// 				i.i3{background-position:-135px -303px;}
+// 				i.i4{background-position:-201px -303px;}
+// 				i.i5{background-position:-270px -303px;}
+// 				i.i6{background-position:1px -377px;}
+// 				i.i7{background-position:-66px -377px;}
+// 				i.i8{background-position:-135px -377px;}
+// 				i.i9{background-position:-201px -377px;}
+// 				p{
+// 					color:#f6ac1d;
+// 				}
+// 			}
+// 		}
+// 	}
+// 	.right{
+// 		float:right;
+// 		width:14.5%;
+// 		>div{
+// 			width:210px;
+// 			background:rgba(43,43,43,.8);
+// 		}
+// 		.right-top{
+// 			height:86px;
+// 			a{
+// 				padding-top: 20px;
+//     			display: block;
+// 				.user{
+// 					display:inline-block;
+// 					margin:0 0 0 20px;
+// 					width:40px;
+// 					height:40px;
+// 					background:url("../images/sgo_icon.png") -278px -389px no-repeat;
+// 				}
+// 				.arrow{
+// 					display:inline-block;
+// 					margin:0 0 0 20px;
+// 					width:23px;
+// 					height:38px;
+// 					background:url("../images/sgo_icon.png") -334px -389px no-repeat;
+// 				}
+// 			}
+// 		}
+// 		.right-bottom{
+// 			margin-top:2px;
+// 			height:176px;
+// 		}
+// 	}
+// }
+// .warpper-systm{
+// 	.header{
+// 		background:none;
+// 	}
+// 	.systm-logo{
+// 		margin:0 auto;
+// 		width:1100px;
+// 		height:160px;
+// 		.img{
+// 			width:139px;
+// 			height:160px;
+// 			background:url("../images/sgo_icon.png") -361px -164px no-repeat;
+// 		}
+// 	}
+// 	.footer{
+// 		margin:0 auto;
+// 		width:1100px;
+// 		height:100px;
+// 		background:none;
+// 		p{
+// 			font:12px/2 pxmyFirstFont, $publicFont;
+// 			color:#fff;
+// 		}
+// 	}
+// } 
