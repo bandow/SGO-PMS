@@ -1,0 +1,439 @@
+@import 'public/base';
+body, #wrapper, html {
+    height: 100%;
+    background-color: #f5f5f5
+}
+.w1278{width:1278px;margin:0 auto;}
+.arrow-bottom {
+    position:relative;
+    &:after {
+	    content: '';
+	    position: absolute;
+	    top:50%;
+        right: 10px;
+	    width: 6px;
+	    height: 6px;
+	    border: 1px solid;
+	    border-bottom: 0;
+	    border-right: 0;
+	    margin-top: -6px;
+	    color: #f6ac1d;
+	    @include transform(rotateZ(-135deg));
+	}
+}
+#wrapper{
+    width:100%;
+    background-color: #f5f5f5
+}
+.header{
+	overflow:hidden;
+	>div{
+		float:left;
+	}
+	.title{
+		padding-right:30px;
+		i{
+		    margin-top:3px;
+			float:left;
+			display:block;
+			width:32px;
+			height:32px;
+			background:url("../images/pms_icon.png") -252px -26px no-repeat;
+		}
+		h2{
+			float:left;
+			margin-left:20px;
+			font:30px/32px $publicFont;
+			color:#58595b;
+		}
+	}
+	.select{
+		margin-top:3px;
+		margin-left:50px;
+		padding:0 10px;
+		width:100px;
+		height:30px;
+		border:1px solid #ddd;
+		border-radius:5px;
+		background-color: #fff;
+		select{
+			background:none;
+			border:none;
+			outline:none;
+			appearance:none;
+			-moz-appearance:none;
+			-webkit-appearance:none;
+			width:100%;
+			height:100%;
+			cursor:pointer;
+			color:#5e5b5b;
+		}
+	}
+	.search{
+		margin-top:3px;
+		margin-left:20px;
+		padding:0 10px;
+		width:100px;
+		height:30px;
+		border:1px solid #ddd;
+		border-radius:5px;
+		background-color: #fff;
+		input{
+			float:left;
+			background:none;
+			border:none;
+			outline:none;
+			appearance:none;
+			-moz-appearance:none;
+			-webkit-appearance:none;
+			width:85%;
+			height:100%;
+			cursor:pointer;
+			color:#5e5b5b;
+			&::-webkit-input-placeholder{
+				color:#5e5b5b;
+			}
+		}
+		i{
+			margin-top:10px;
+			float:left;
+			display:block;
+			width:11px;
+			height:11px;
+			background:url("../images/pms_icon.png") -376px -26px no-repeat;
+		}
+	}
+	.select-list{
+		margin-left:10px;
+		ul li{
+			width:50px;
+			margin:0 3px;
+			display:inline-block;
+			p{
+				text-align:center;
+				font:14px/1 $publicFont;
+				color:#5e5b5b;
+			}
+			.btn{
+				margin:2px auto 0;
+				position:relative;
+				width:25px;
+				height:12px;
+				background-color:#c4c8d9;
+				border-radius:30px;
+				font-size:0;
+				cursor:pointer;
+				&:before{
+					content:"";
+					position: absolute;
+					top:0;
+					left:0;
+					width:10px;
+					height:10px;
+					border-radius:100%;
+					background-color:#fff;
+					border:1px solid #f6e3c0;
+					@include transition(all .5s);
+				}
+			}
+			.btn.on{
+				background-color:#f6ac1d;
+				&:before{
+					content:"";
+					position: absolute;
+					top:0;
+					left:13px;
+					width:10px;
+					height:10px;
+					border-radius:100%;
+					background-color:#fff;
+					border:1px solid #f6e3c0;
+					@include transition(all .5s);
+				}
+			}
+		}
+	}
+	>a.right-btn{
+		float:left;
+		margin:0 0 10px 20px;
+		padding:0 10px;
+		display:block;
+		width:120px;
+		height:36px;
+		border-radius:5px;
+		box-shadow:1px 5px 8px #ff9602;
+		text-decoration:none;
+		text-align:right;
+		background: -webkit-linear-gradient(right bottom, #f8ab26 , #fe8f4d); 
+		background: -o-linear-gradient(top left, #f8ab26, #fe8f4d); 
+		background: -moz-linear-gradient(top left, #f8ab26, #fe8f4d); 
+		background: linear-gradient(to top left, #f8ab26 , #fe8f4d); 
+		&:hover{
+			background: -webkit-linear-gradient(left top, #f8ab26 , #fe8f4d); 
+			background: -o-linear-gradient(bottom right, #f8ab26, #fe8f4d); 
+			background: -moz-linear-gradient(bottom right, #f8ab26, #fe8f4d); 
+			background: linear-gradient(to bottom right, #f8ab26 , #fe8f4d); 
+		}
+		i{
+			margin-top:10px;
+			float:left;
+			display:inline-block;
+			width:16px;
+			height:17px;
+			background:url("../images/pms_icon.png") -391px -26px no-repeat;
+		}
+		p{
+			font:18px/36px $publicFont;
+			color:#fff;
+		}
+	}
+}
+.room-state-content{
+	overflow:hidden;
+	.left{
+		position:relative;
+		z-index:99;
+	    float:left;
+		width:30px;
+		height:auto;
+		background-color:#fff;
+		dl{
+			padding-top:10px;
+			padding-bottom:100px;
+			border:1px solid #ddd;
+			border-radius:3px;
+			dt{
+				i{
+					margin:20px 0 30px 4px;
+					display: block;
+					width:13px;
+					height:14px;
+					background:url("../images/3body_icon.png") -440px -16px no-repeat;
+				}
+			}
+			dd{
+				margin:10px 0;
+				font:14px/26px $publicFont;
+				color:#58595b;
+				text-align:center;
+				cursor: pointer;
+			}
+			dd.on{
+				background-color:#edf2f8;
+				border-bottom:3px solid #f6ac1e;
+			}
+		}
+	}
+	.right{
+		margin:0 40px 0 50px;
+		position:relative;
+		padding:10px;
+		height:auto;
+		overflow:hidden;
+		background-color:#fff;
+		.right-m{
+			ul{
+				li{
+					padding:5px;
+					float:left;
+					width:120px;
+					height:120px;
+					background-color:#edf2f8;
+					margin:0 10px 10px 0;
+					cursor:pointer;
+					.name{
+						h5{
+							height:24px;
+							color:#fff;
+							font:14px/24px $publicFont;
+						}
+					}
+					.icon{
+						height:20px;
+						>div{
+							float:left;
+							margin-left:5px;
+							display:inline-block;
+							width:20px;
+							height:20px;
+							border-radius:100%;
+							i{
+								display: block;
+								background:url("../images/3body_icon.png") no-repeat;
+							}
+							
+						}
+						.vip-icon{
+							background-color:#e2c500;
+							i{
+								font-style:inherit;
+								color:#fff;
+								font:12px/20px $publicFont;
+								text-align:center;
+								background:none;
+							}
+						}
+						.leave-icon{
+							background-color:#fde01f;
+							i{
+								margin:5px 0 0 3px;
+								width:14px;
+								height:9px;
+								background-position:-415px -43px;
+							}
+						}
+						.stop-icon{
+							background-color:#fd621f;
+							i{
+								margin:2px 0 0 3px;
+								width:15px;
+								height:16px;
+								background-position:-347px -43px;
+							}
+						}
+						.cleaning-icon{
+							background-color:#62b3b6;
+							i{
+								margin:5px 0 0 3px;
+								width:12px;
+								height:12px;
+								background-position:-366px -43px;
+							}
+						}
+						.arrear-icon{
+							background-color:#d63c6e;
+							i{
+								font-style:inherit;
+								color:#fff;
+								font:12px/20px $publicFont;
+								text-align:center;
+								background:none;
+							}
+						}
+						.inspect-icon{
+							background-color:#ffa308;
+							i{
+								font-style:inherit;
+								color:#fff;
+								font:12px/20px $publicFont;
+								text-align:center;
+								background:none;
+							}
+						}
+						.dirty-icon{
+							background-color:#959ea7;
+							i{
+								margin:2px 0 0 4px;
+								width:12px;
+								height:16px;
+								background-position:-331px -43px;
+							}
+						}
+						.hour-icon{
+							background-color:#b65ece;
+							i{
+								margin:2px 0 0 3px;
+								width:14px;
+								height:15px;
+								background-position:-397px -43px;
+							}
+						}
+						.room-icon{
+							background-color:#98aed3;
+							i{
+								font-style:inherit;
+								color:#fff;
+								font:12px/20px $publicFont;
+								text-align:center;
+								background:none;
+							}
+						}
+						.secrecy-icon{
+							background-color:#9ea7b1;
+							i{
+								margin:3px 0 0 4px;
+								width:12px;
+								height:13px;
+								background-position:-382px -43px;
+							}
+						}
+					}
+					.number{
+						height:24px;
+						color:#fff;
+						font:14px/24px $publicFont;
+						text-align:right;
+					}
+					.sdk{
+						overflow:hidden;
+						color:#fff;
+						font:14px/1.2 $publicFont;
+						span{
+							margin-top:3px;
+							float:left;
+						}
+						em{
+							float:right;
+							font-size:18px;
+						}
+					}
+				}
+				li.select{
+					color: #000;
+				    opacity: 0.5;
+				    transform: rotate(7deg);
+				    transition: 0.5s;
+				}
+				li.live{background-color:#9dc75b;}
+				li.clean{background-color:#00a8ec;}
+				li.stop{background-color:#fd621f;}
+				li.cleaning{background-color:#62b3b6;}
+				li.dirty{background-color:#959ea7;}
+			}
+		}
+	}
+}
+.footer{
+	ul{
+		margin-left:50px;
+	}
+	ul li{
+		margin-top:15px;
+		margin-right:15px;
+		display:inline-block;
+		i{
+			margin-top:3px;
+			float:left;
+			display:block;
+			width:20px;
+			height:20px;
+			background:url("../images/pms_icon.png") no-repeat;
+		}
+		i.i1{background-position:-86px 0;}
+		i.i2{background-position:-110px 0;}
+		i.i3{background-position:-135px 0;}
+		i.i4{background-position:-160px 0;}
+		i.i5{background-position:-184px 0;}
+		i.i6{background-position:-209px 0;}
+		i.i7{background-position:-234px 0;}
+		i.i8{background-position:-258px 0;}
+		i.i9{background-position:-283px 0;}
+		i.i10{background-position:-307px 0;}
+		i.i11{background-position:-332px 0;}
+		i.i12{background-position:-359px 0;}
+		i.i13{background-position:-385px 0;}
+		i.i14{background-position:-411px 0;}
+		i.i15{background-position:-435px 0;}
+		p{
+		   float:left;
+           margin-left:5px;
+           font:14px/24px $publicFont;
+           color:#5e5b5b;
+		}
+	}
+	>p{
+		font:12px/30px $publicFont;
+		text-align:right;
+		margin-right: 80px;
+	}
+}

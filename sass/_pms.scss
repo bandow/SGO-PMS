@@ -1,10 +1,14 @@
 @import 'public/base';
-@font-face{
-	font-family: myFirstFont;
-	src: url('../font/hiragino.otf')
-}
+// @font-face{
+// 	font-family: myFirstFont;
+// 	src: url('../font/hiragino.otf')
+// }
 body, #wrapper, html {
     height: 100%;
+}
+.w979{
+	width:979px;
+	margin:0 auto;
 }
 #wrapper {
     width: 100%;
@@ -38,37 +42,179 @@ body, #wrapper, html {
 			border-bottom:1px solid #4e4f51;
 			a{
 				padding:14px 0;
-				font:14px/20px myFirstFont, $publicFont;
+				font:14px/20px $publicFont;
 				color:#fff;
 				text-decoration:none;
 				display:block;
 			}
-			.list{
+			.info{
 				position:absolute;
-				top:0;
+				top:-189px;
 				left:122px;
 				z-index:1;
+				padding:20px;
 				display:none;
-				dl dd{
-					width:122px;
-					height:47px;
-					border:1px solid #eee;
-					border-left:0;
-					border-top:0;
-					background:rgba(245,245,245,.79);
-					&:first-child{
-						border-top:1px solid #eee;
+				width:290px;
+				background:rgba(0,0,0,.8);
+				.items{
+					overflow: hidden;
+					padding:15px 0;
+					border-bottom:1px solid #c3c3c3;
+					>p{
+						float:left;
+						font:16px/1.5 $publicFont;
+						color:#f5f5f5;
 					}
-					a{
-						display: block;
-						text-align: center;
-						text-decoration: none;
-						font:14px/48px myFirstFont, $publicFont;
-						color:#58595b;
+					.date-r{
+						float:right;
+						background-color:#e0e0e0;
+						border-radius:5px;
+						width:146px;
+						height:128px;
+						.date-week{
+							padding:5px 0;
+							span{
+								color:#2b2b2b;
+								font:18px/1.5 $publicFont;
+							}
+						}
+						.b{
+							padding:0 10px;
+							background-color:#f6ac1d;
+							margin:1px;
+							height: 89px;
+							border-radius:0 0 5px 5px;
+							.day{
+								color:#f5f5f5;
+								font:48px/63px $publicFont;
+								text-align:center;
+								border-bottom:1px solid #f5f5f5;
+							}
+							.hour{
+								i{
+									margin-top:5px;
+								    float: left;
+								    display: inline-block;
+								    width: 15px;
+								    height: 15px;
+								    background: url(../images/pms_icon.png) -356px -26px no-repeat;
+								}
+								em{
+									float:right;
+									color:#f5f5f5;
+									font:16px/26px $publicFont;	
+								}
+							}
+						}
+					}
+					.t{
+						overflow:hidden;
+						p{
+							float:left;
+							font:16px/1.5 $publicFont;
+							color:#f5f5f5;
+						}
+						.r{
+							float:right;
+							h2{
+								font:bold 48px/1 $publicFont;
+								color:#f6ac1d;
+								span{
+									font-weight:normal;
+									font-size:16px;
+								}
+							}
+						}
+					}
+					.lease-line{
+						margin:10px 5px;
+						height:10px;
+						border-radius:30px;
+						background-color:#ddd;
+					    border: 1px solid #f5f5f5;
+					    .lease-line-content{
+					    	float:left;
+						    height:100%;
+					    	border-radius:30px;
+					    	background-color:#f6ac1d;
+					    }
+					}
+					.proportion-line{
+						margin:10px 5px;
+						height:10px;
+						border-radius:30px;
+						background-color:#ddd;
+					    border: 1px solid #f5f5f5;
+						>div{
+							float:left;
+						    height:100%;
+							&:first-child{
+								border-radius:30px 0 0 30px;
+							}
+							&:last-child{
+								border-radius:0 30px 30px 0;
+							}
+						}
+						.c1{
+							background-color:#a9d15b;
+						}
+						.c2{
+							background-color:#fd621f;
+						}
+						.c3{
+							background-color:#fde01f;
+						}
+						.c4{
+							background-color:#98aed3;
+						}
+						.c5{
+							background-color:#4dbeff;
+						}
 					}
 				}
-				dl dd.active{
-					a{color:#f6ac1d;}
+				>p{
+				    margin-bottom:5px;
+				    overflow: hidden;
+					i{
+						margin-top:5px;
+						float:left;
+						border-radius:100%;
+						width:20px;
+						height:20px;				
+					}
+					i.c1{
+						background-color:#a9d15b;
+					}
+					i.c2{
+						background-color:#fd621f;
+					}
+					i.c3{
+						background-color:#fde01f;
+					}
+					i.c4{
+						background-color:#98aed3;
+					}
+					i.c5{
+						background-color:#4dbeff;
+					}
+					i.c6{
+						width:21px;
+						height:20px;
+						background:url("../images/pms_icon.png") -330px -26px no-repeat;
+					    border-radius: 0;
+					}
+					span{
+						float:left;
+						margin-left:5px;
+						font:14px/30px $publicFont;
+						color:#f5f5f5;
+					}
+					em{
+						margin-left:10px;
+					    float:left;
+						font:14px/30px $publicFont;
+						color:#f6ac1d;
+					}
 				}
 			}
 			.f{
@@ -80,7 +226,7 @@ body, #wrapper, html {
 				border-radius:3px;
 			    text-align:center;
 				i{
-					font:12px/20px myFirstFont, $publicFont;
+					font:12px/20px $publicFont;
 					color:#f5f5f5;
 				    font-style:normal;
 				}
@@ -126,7 +272,7 @@ body, #wrapper, html {
 				border-radius:3px;
 			    text-align:center;
 				i{
-					font:12px/20px myFirstFont, $publicFont;
+					font:12px/20px $publicFont;
 					color:#747474;
 				    font-style:normal;
 				}
@@ -158,68 +304,174 @@ body, #wrapper, html {
     position: inherit;
     margin: 0 0 0 122px;
     .header-nav{
-    	height:61px;
-    	background-color:#58595b;
-    	.nav-right{
-    		float:right;
-    		margin-right:60px;
-    		overflow:hidden;
-    		>a{
-    			float:left;
-			    margin-left: 20px;
-    		}
-    		.room{
-    			padding-right:5px;
-    			margin-right:20px;
-    			font:14px/61px myFirstFont, $publicFont;
-				color:#fff;
-    		}
-    		.user{
-    			span{
-    				float:left;
-    				font:14px/61px myFirstFont, $publicFont;
+    	height:110px;
+    	.nav-top{
+    		height:60px;
+    		background-color:#58595b;
+    		.nav-right{
+	    		float:right;
+	    		margin-right:60px;
+	    		overflow:hidden;
+	    		>a{
+	    			float:left;
+				    margin-left: 20px;
+	    		}
+	    		.room{
+	    			padding-right:5px;
+	    			margin-right:20px;
+	    			font:14px/61px $publicFont;
 					color:#fff;
-    			}
-    			i{
-				    margin: 10px 0 0 15px;
-    				float:left;
-    				display:inline-block;
-    				width:40px;
-    				height:40px;
-    				font-size:0;
-    				border-radius:100%;
-    				overflow:hidden;
-    				img{
-					
-    				}
-    			}
-    		}
-    		.quit{
-			 	margin:20px 0 0 20px;
-				width:19px;
-				height:18px;
-				background:url("../images/ebooking_icon.png") no-repeat;
-    		}
-    		.go-online{
-    			padding:12px 20px 0;
-    			height:61px;
-    			background-color:#f6ac1d;
-    			p{
-    				font:14px/1.2 myFirstFont, $publicFont;
-					color:#58595b;
-    			}
-    			i{
-    				margin:0 auto;
-    				display:block;
-    				width:22px;
-					height:22px;
-					background:url("../images/ebooking_icon.png") -24px 0 no-repeat;
-    			}
-    		}
+	    		}
+	    		.user{
+	    			span{
+	    				float:left;
+	    				font:14px/61px $publicFont;
+						color:#fff;
+	    			}
+	    			i{
+					    margin: 10px 0 0 15px;
+	    				float:left;
+	    				display:inline-block;
+	    				width:40px;
+	    				height:40px;
+	    				font-size:0;
+	    				border-radius:100%;
+	    				overflow:hidden;
+	    				img{
+						
+	    				}
+	    			}
+	    		}
+	    		.settings{
+	    			margin-top:10px;
+	    			width:40px;
+	    			height:40px;
+	    			background-color:#4e4f51;
+	    			border-radius:100%;
+	    			i{
+	    				margin:10px auto 0;
+	    				display:block;
+	    				width:19px;
+						height:19px;
+						background:url("../images/pms_icon.png") -38px 0 no-repeat;
+	    			}			
+	    		}
+	    		.close{
+					margin:20px 0 0 20px;
+					display:block;
+					width:19px;
+					height:18px;
+					background:url("../images/pms_icon.png") -61px 0 no-repeat;
+	    		}
+	    	}
     	}
+    	.nav-list{
+    		width:100%;
+			height:50px;
+			background-color:#fff;
+			box-shadow:1px 3px 10px #e5ecf3;
+			.nav-con{
+				margin-left:80px;
+				ul{
+					margin:0 auto;
+					padding-top:6px;
+					li{
+						float:left;
+						margin-right:35px;
+						i{
+						    margin-top: 10px;
+							float:left;
+							width:21px;
+							height:21px;
+							background:url("../images/pms_icon.png") no-repeat;
+						}
+						i.i1{
+							background-position:0 -26px;
+						}
+						i.i2{
+							background-position:-24px -26px;
+						}
+						i.i3{
+							background-position:-48px -26px;
+						}
+						i.i4{
+							background-position:-69px -26px;
+						}
+						i.i5{
+							background-position:-91px -26px;
+						}
+						i.i6{
+							background-position:-113px -26px;
+						}
+						i.i7{
+							background-position:-133px -26px;
+						}
+						i.i8{
+							background-position:-154px -26px;
+						}
+						i.i9{
+							background-position:-174px -26px;
+						}
+						i.i10{
+							background-position:-195px -26px;
+						}
+						i.i11{
+							background-position:-214px -26px;
+						}
+						span{
+							float:left;
+							margin-left:5px;
+							font:14px/40px $publicFont;
+							color:#323a4d;
+						}
+					}
+					li.last{
+						margin-right:0;
+					}
+					li.on{
+						border-bottom:3px solid #f6ac1d;
+						i.i1{
+							background-position:0 -48px;
+						}
+						i.i2{
+							background-position:-24px -48px;
+						}
+						i.i3{
+							background-position:-48px -48px;
+						}
+						i.i4{
+							background-position:-69px -48px;
+						}
+						i.i5{
+							background-position:-91px -48px;
+						}
+						i.i6{
+							background-position:-113px -48px;
+						}
+						i.i7{
+							background-position:-133px -48px;
+						}
+						i.i8{
+							background-position:-154px -48px;
+						}
+						i.i9{
+							background-position:-174px -48px;
+						}
+						i.i10{
+							background-position:-195px -48px;
+						}
+						i.i11{
+							background-position:-214px -48px;
+						}
+						span{color:#f6ac1d;}
+					}
+				}
+			}
+    	}
+    	
     }
     #content-main{
-	    padding: 20px 0;
+	    padding: 20px 0 0 30px;
     	overflow: hidden;
     }
 }

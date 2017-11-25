@@ -7,7 +7,7 @@
 * Version:0.0.1
 * ================================================================== */
 html {
-  font-family: Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif; }
+  font-family: "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif; }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, div, mark, audio, video {
   margin: 0;
@@ -44,11 +44,12 @@ a, a:hover, a:active, a:visited, a:link, a:focus {
   background: none;
   text-decoration: none; }
 
-@font-face {
-  font-family: myFirstFont;
-  src: url("../font/hiragino.otf"); }
 body, #wrapper, html {
   height: 100%; }
+
+.w979 {
+  width: 979px;
+  margin: 0 auto; }
 
 #wrapper {
   width: 100%;
@@ -76,32 +77,141 @@ body, #wrapper, html {
   border-bottom: 1px solid #4e4f51; }
 .warpper .sidebar-collapse ul li a {
   padding: 14px 0;
-  font: 14px/20px myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  font: 14px/20px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
   color: #fff;
   text-decoration: none;
   display: block; }
-.warpper .sidebar-collapse ul li .list {
+.warpper .sidebar-collapse ul li .info {
   position: absolute;
-  top: 0;
+  top: -189px;
   left: 122px;
   z-index: 1;
-  display: none; }
-.warpper .sidebar-collapse ul li .list dl dd {
-  width: 122px;
-  height: 47px;
-  border: 1px solid #eee;
-  border-left: 0;
-  border-top: 0;
-  background: rgba(245, 245, 245, 0.79); }
-.warpper .sidebar-collapse ul li .list dl dd:first-child {
-  border-top: 1px solid #eee; }
-.warpper .sidebar-collapse ul li .list dl dd a {
-  display: block;
+  padding: 20px;
+  display: none;
+  width: 290px;
+  background: rgba(0, 0, 0, 0.8); }
+.warpper .sidebar-collapse ul li .info .items {
+  overflow: hidden;
+  padding: 15px 0;
+  border-bottom: 1px solid #c3c3c3; }
+.warpper .sidebar-collapse ul li .info .items > p {
+  float: left;
+  font: 16px/1.5 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #f5f5f5; }
+.warpper .sidebar-collapse ul li .info .items .date-r {
+  float: right;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  width: 146px;
+  height: 128px; }
+.warpper .sidebar-collapse ul li .info .items .date-r .date-week {
+  padding: 5px 0; }
+.warpper .sidebar-collapse ul li .info .items .date-r .date-week span {
+  color: #2b2b2b;
+  font: 18px/1.5 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif; }
+.warpper .sidebar-collapse ul li .info .items .date-r .b {
+  padding: 0 10px;
+  background-color: #f6ac1d;
+  margin: 1px;
+  height: 89px;
+  border-radius: 0 0 5px 5px; }
+.warpper .sidebar-collapse ul li .info .items .date-r .b .day {
+  color: #f5f5f5;
+  font: 48px/63px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
   text-align: center;
-  text-decoration: none;
-  font: 14px/48px myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
-  color: #58595b; }
-.warpper .sidebar-collapse ul li .list dl dd.active a {
+  border-bottom: 1px solid #f5f5f5; }
+.warpper .sidebar-collapse ul li .info .items .date-r .b .hour i {
+  margin-top: 5px;
+  float: left;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(../images/pms_icon.png) -356px -26px no-repeat; }
+.warpper .sidebar-collapse ul li .info .items .date-r .b .hour em {
+  float: right;
+  color: #f5f5f5;
+  font: 16px/26px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif; }
+.warpper .sidebar-collapse ul li .info .items .t {
+  overflow: hidden; }
+.warpper .sidebar-collapse ul li .info .items .t p {
+  float: left;
+  font: 16px/1.5 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #f5f5f5; }
+.warpper .sidebar-collapse ul li .info .items .t .r {
+  float: right; }
+.warpper .sidebar-collapse ul li .info .items .t .r h2 {
+  font: bold 48px/1 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #f6ac1d; }
+.warpper .sidebar-collapse ul li .info .items .t .r h2 span {
+  font-weight: normal;
+  font-size: 16px; }
+.warpper .sidebar-collapse ul li .info .items .lease-line {
+  margin: 10px 5px;
+  height: 10px;
+  border-radius: 30px;
+  background-color: #ddd;
+  border: 1px solid #f5f5f5; }
+.warpper .sidebar-collapse ul li .info .items .lease-line .lease-line-content {
+  float: left;
+  height: 100%;
+  border-radius: 30px;
+  background-color: #f6ac1d; }
+.warpper .sidebar-collapse ul li .info .items .proportion-line {
+  margin: 10px 5px;
+  height: 10px;
+  border-radius: 30px;
+  background-color: #ddd;
+  border: 1px solid #f5f5f5; }
+.warpper .sidebar-collapse ul li .info .items .proportion-line > div {
+  float: left;
+  height: 100%; }
+.warpper .sidebar-collapse ul li .info .items .proportion-line > div:first-child {
+  border-radius: 30px 0 0 30px; }
+.warpper .sidebar-collapse ul li .info .items .proportion-line > div:last-child {
+  border-radius: 0 30px 30px 0; }
+.warpper .sidebar-collapse ul li .info .items .proportion-line .c1 {
+  background-color: #a9d15b; }
+.warpper .sidebar-collapse ul li .info .items .proportion-line .c2 {
+  background-color: #fd621f; }
+.warpper .sidebar-collapse ul li .info .items .proportion-line .c3 {
+  background-color: #fde01f; }
+.warpper .sidebar-collapse ul li .info .items .proportion-line .c4 {
+  background-color: #98aed3; }
+.warpper .sidebar-collapse ul li .info .items .proportion-line .c5 {
+  background-color: #4dbeff; }
+.warpper .sidebar-collapse ul li .info > p {
+  margin-bottom: 5px;
+  overflow: hidden; }
+.warpper .sidebar-collapse ul li .info > p i {
+  margin-top: 5px;
+  float: left;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px; }
+.warpper .sidebar-collapse ul li .info > p i.c1 {
+  background-color: #a9d15b; }
+.warpper .sidebar-collapse ul li .info > p i.c2 {
+  background-color: #fd621f; }
+.warpper .sidebar-collapse ul li .info > p i.c3 {
+  background-color: #fde01f; }
+.warpper .sidebar-collapse ul li .info > p i.c4 {
+  background-color: #98aed3; }
+.warpper .sidebar-collapse ul li .info > p i.c5 {
+  background-color: #4dbeff; }
+.warpper .sidebar-collapse ul li .info > p i.c6 {
+  width: 21px;
+  height: 20px;
+  background: url("../images/pms_icon.png") -330px -26px no-repeat;
+  border-radius: 0; }
+.warpper .sidebar-collapse ul li .info > p span {
+  float: left;
+  margin-left: 5px;
+  font: 14px/30px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #f5f5f5; }
+.warpper .sidebar-collapse ul li .info > p em {
+  margin-left: 10px;
+  float: left;
+  font: 14px/30px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
   color: #f6ac1d; }
 .warpper .sidebar-collapse ul li .f {
   float: left;
@@ -112,7 +222,7 @@ body, #wrapper, html {
   border-radius: 3px;
   text-align: center; }
 .warpper .sidebar-collapse ul li .f i {
-  font: 12px/20px myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  font: 12px/20px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
   color: #f5f5f5;
   font-style: normal; }
 .warpper .sidebar-collapse ul li .img {
@@ -151,7 +261,7 @@ body, #wrapper, html {
   border-radius: 3px;
   text-align: center; }
 .warpper .sidebar-collapse ul li.active .f i {
-  font: 12px/20px myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  font: 12px/20px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
   color: #747474;
   font-style: normal; }
 .warpper .sidebar-collapse ul li.active .img i {
@@ -178,25 +288,27 @@ body, #wrapper, html {
   position: inherit;
   margin: 0 0 0 122px; }
 #page-wrapper .header-nav {
-  height: 61px;
+  height: 110px; }
+#page-wrapper .header-nav .nav-top {
+  height: 60px;
   background-color: #58595b; }
-#page-wrapper .header-nav .nav-right {
+#page-wrapper .header-nav .nav-top .nav-right {
   float: right;
   margin-right: 60px;
   overflow: hidden; }
-#page-wrapper .header-nav .nav-right > a {
+#page-wrapper .header-nav .nav-top .nav-right > a {
   float: left;
   margin-left: 20px; }
-#page-wrapper .header-nav .nav-right .room {
+#page-wrapper .header-nav .nav-top .nav-right .room {
   padding-right: 5px;
   margin-right: 20px;
-  font: 14px/61px myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  font: 14px/61px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
   color: #fff; }
-#page-wrapper .header-nav .nav-right .user span {
+#page-wrapper .header-nav .nav-top .nav-right .user span {
   float: left;
-  font: 14px/61px myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  font: 14px/61px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
   color: #fff; }
-#page-wrapper .header-nav .nav-right .user i {
+#page-wrapper .header-nav .nav-top .nav-right .user i {
   margin: 10px 0 0 15px;
   float: left;
   display: inline-block;
@@ -205,26 +317,100 @@ body, #wrapper, html {
   font-size: 0;
   border-radius: 100%;
   overflow: hidden; }
-#page-wrapper .header-nav .nav-right .quit {
+#page-wrapper .header-nav .nav-top .nav-right .settings {
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: #4e4f51;
+  border-radius: 100%; }
+#page-wrapper .header-nav .nav-top .nav-right .settings i {
+  margin: 10px auto 0;
+  display: block;
+  width: 19px;
+  height: 19px;
+  background: url("../images/pms_icon.png") -38px 0 no-repeat; }
+#page-wrapper .header-nav .nav-top .nav-right .close {
   margin: 20px 0 0 20px;
+  display: block;
   width: 19px;
   height: 18px;
-  background: url("../images/ebooking_icon.png") no-repeat; }
-#page-wrapper .header-nav .nav-right .go-online {
-  padding: 12px 20px 0;
-  height: 61px;
-  background-color: #f6ac1d; }
-#page-wrapper .header-nav .nav-right .go-online p {
-  font: 14px/1.2 myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
-  color: #58595b; }
-#page-wrapper .header-nav .nav-right .go-online i {
+  background: url("../images/pms_icon.png") -61px 0 no-repeat; }
+#page-wrapper .header-nav .nav-list {
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  box-shadow: 1px 3px 10px #e5ecf3; }
+#page-wrapper .header-nav .nav-list .nav-con {
+  margin-left: 80px; }
+#page-wrapper .header-nav .nav-list .nav-con ul {
   margin: 0 auto;
-  display: block;
-  width: 22px;
-  height: 22px;
-  background: url("../images/ebooking_icon.png") -24px 0 no-repeat; }
+  padding-top: 6px; }
+#page-wrapper .header-nav .nav-list .nav-con ul li {
+  float: left;
+  margin-right: 35px; }
+#page-wrapper .header-nav .nav-list .nav-con ul li i {
+  margin-top: 10px;
+  float: left;
+  width: 21px;
+  height: 21px;
+  background: url("../images/pms_icon.png") no-repeat; }
+#page-wrapper .header-nav .nav-list .nav-con ul li i.i1 {
+  background-position: 0 -26px; }
+#page-wrapper .header-nav .nav-list .nav-con ul li i.i2 {
+  background-position: -24px -26px; }
+#page-wrapper .header-nav .nav-list .nav-con ul li i.i3 {
+  background-position: -48px -26px; }
+#page-wrapper .header-nav .nav-list .nav-con ul li i.i4 {
+  background-position: -69px -26px; }
+#page-wrapper .header-nav .nav-list .nav-con ul li i.i5 {
+  background-position: -91px -26px; }
+#page-wrapper .header-nav .nav-list .nav-con ul li i.i6 {
+  background-position: -113px -26px; }
+#page-wrapper .header-nav .nav-list .nav-con ul li i.i7 {
+  background-position: -133px -26px; }
+#page-wrapper .header-nav .nav-list .nav-con ul li i.i8 {
+  background-position: -154px -26px; }
+#page-wrapper .header-nav .nav-list .nav-con ul li i.i9 {
+  background-position: -174px -26px; }
+#page-wrapper .header-nav .nav-list .nav-con ul li i.i10 {
+  background-position: -195px -26px; }
+#page-wrapper .header-nav .nav-list .nav-con ul li i.i11 {
+  background-position: -214px -26px; }
+#page-wrapper .header-nav .nav-list .nav-con ul li span {
+  float: left;
+  margin-left: 5px;
+  font: 14px/40px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  color: #323a4d; }
+#page-wrapper .header-nav .nav-list .nav-con ul li.last {
+  margin-right: 0; }
+#page-wrapper .header-nav .nav-list .nav-con ul li.on {
+  border-bottom: 3px solid #f6ac1d; }
+#page-wrapper .header-nav .nav-list .nav-con ul li.on i.i1 {
+  background-position: 0 -48px; }
+#page-wrapper .header-nav .nav-list .nav-con ul li.on i.i2 {
+  background-position: -24px -48px; }
+#page-wrapper .header-nav .nav-list .nav-con ul li.on i.i3 {
+  background-position: -48px -48px; }
+#page-wrapper .header-nav .nav-list .nav-con ul li.on i.i4 {
+  background-position: -69px -48px; }
+#page-wrapper .header-nav .nav-list .nav-con ul li.on i.i5 {
+  background-position: -91px -48px; }
+#page-wrapper .header-nav .nav-list .nav-con ul li.on i.i6 {
+  background-position: -113px -48px; }
+#page-wrapper .header-nav .nav-list .nav-con ul li.on i.i7 {
+  background-position: -133px -48px; }
+#page-wrapper .header-nav .nav-list .nav-con ul li.on i.i8 {
+  background-position: -154px -48px; }
+#page-wrapper .header-nav .nav-list .nav-con ul li.on i.i9 {
+  background-position: -174px -48px; }
+#page-wrapper .header-nav .nav-list .nav-con ul li.on i.i10 {
+  background-position: -195px -48px; }
+#page-wrapper .header-nav .nav-list .nav-con ul li.on i.i11 {
+  background-position: -214px -48px; }
+#page-wrapper .header-nav .nav-list .nav-con ul li.on span {
+  color: #f6ac1d; }
 #page-wrapper #content-main {
-  padding: 20px 0;
+  padding: 20px 0 0 30px;
   overflow: hidden; }
 
 .row {

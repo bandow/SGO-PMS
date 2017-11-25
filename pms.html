@@ -41,11 +41,58 @@
 								<span>客历管理</span>
 							</a>
 						</li>
-						<li class="arrow-right">
+						<li class="arrow-right all-info">
 							<a href="javascript:;" data-index="4.html">
 								<div class="img"><i></i></div>
 								<span>汇总信息</span>
 							</a>
+							<div class="info">
+								<div class="items">
+									<p>营业日</p>
+									<div class="date-r">
+										<p class="date-week">
+											<span class="date" id="date"></span>
+											<span class="week" id="week"></span>
+										</p>
+										<div class="b">
+											<p class="day" id="day"></p>
+											<p class="hour"><i></i><em id="time"></em></p>
+										</div>
+									</div>
+								</div>
+								<div class="items">
+									<div class="t">
+										<p>出租率</p>
+										<div class="r">
+											<h2>77<span>.88%</span></h2>
+										</div>
+									</div>
+									<div class="lease-line">
+										<div class="lease-line-content" style="width:77.88%;"></div>
+									</div>
+								</div>
+								<div class="items" style="border-bottom:0;padding-bottom:5px;">
+									<div class="t">
+										<p>总房数</p>
+										<div class="r">
+											<h2>113<span>间</span></h2>
+										</div>
+									</div>
+									<div class="proportion-line">
+										<div class="c1" style="width:50%;"></div>
+										<div class="c2" style="width:5%;"></div>
+										<div class="c3" style="width:30%;"></div>
+										<div class="c4" style="width:10%;"></div>
+										<div class="c5" style="width:5%;"></div>
+									</div>
+								</div>
+								<p><i class="c1"></i><span>今日在住</span><em>38</em></p>
+								<p><i class="c2"></i><span>今日停售</span><em>0</em></p>
+								<p><i class="c3"></i><span>今日预离</span><em>4</em></p>
+								<p><i class="c4"></i><span>今日预抵</span><em>2</em></p>
+								<p><i class="c5" class="c1"></i><span>剩余房间</span><em>77</em></p>
+								<p><i class="c6"></i><span>预算营收</span><em>100.7万</em></p>
+							</div>
 						</li>
 					</ul>
 				</div>
@@ -55,15 +102,90 @@
 		<!--右侧部分开始-->
 		<div id="page-wrapper">
 			<div class="header-nav">
-				<div class="nav-right">
-					<a class="room arrow-bottom" href="">测试门店一</a>
-					<a class="user" href=""><span>值班经理</span><i><img src="images/head.jpg" alt=""></i></a>
-					<a class="settings" href="#"><i></i></a>
-					<a class="close" href="login.html"><i></i></a>
+				<div class="nav-top">
+					<div class="nav-right">
+						<a class="room arrow-bottom" href="">测试门店一</a>
+						<a class="user" href=""><span>值班经理</span><i><img src="images/head.jpg" alt=""></i></a>
+						<a class="settings" href="#"><i></i></a>
+						<a class="close" href="login.html"><i></i></a>
+					</div>
+				</div>
+				<div class="nav-list">
+					<div class="nav-con">
+						<ul>
+							<li class="on">
+								<a href="javascript:;" data-index="roomState.html">
+									<i class="i1"></i>
+									<span>房态</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" data-index="1.html">
+									<i class="i2"></i>
+									<span>预定</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" data-index="1.html">
+									<i class="i3"></i>
+									<span>房单</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" data-index="1.html">
+									<i class="i4"></i>
+									<span>团队</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" data-index="1.html">
+									<i class="i5"></i>
+									<span>工作帐</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" data-index="1.html">
+									<i class="i6"></i>
+									<span>管家</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" data-index="1.html">
+									<i class="i7"></i>
+									<span>会员</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" data-index="1.html">
+									<i class="i8"></i>
+									<span>协议</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" data-index="1.html">
+									<i class="i9"></i>
+									<span>中介</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" data-index="1.html">
+									<i class="i10"></i>
+									<span>报表</span>
+								</a>
+							</li>
+							<li class="last">
+								<a href="javascript:;" data-index="1.html">
+									<i class="i11"></i>
+									<span>夜审</span>
+								</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
+
 			<div class="row J_mainContent" id="content-main">
-                <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="1.html" frameborder="0" data-id="ebooking-v1.html" seamless></iframe>
+                <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="roomState.html" frameborder="0" seamless></iframe>
             </div>
 		</div>
 		<!--右侧部分结束-->
@@ -78,35 +200,52 @@
         $(".nav-content").slimScroll({
             height: windowHeight
         });
-        $(".J_mainContent").slimScroll({
-            height: windowHeight-97
+        $(".warpper .sidebar-collapse ul li .info").css('height',windowHeight-61);
+        $(".J_mainContent").css({
+            height: windowHeight-110
         });
         $(".sidebar-collapse ul li").on("mouseover",function(){
         	$(this).addClass("active").siblings().removeClass("active");
+        	if($(this).hasClass("all-info")){
+        		$(".info").show();
+        	}else{
+        		$(".info").hide();
+        	} 	
         })
         $(".sidebar-collapse ul li").on("mouseout",function(){
         	$(this).removeClass("active");
+        	$(".info").hide();
         })
 
-        $(".sidebar-collapse ul li").on("click",function(){
-        	var dataIndex=$(this).find("a").attr('data-index');
-        	$("#content-main iframe").attr("src",dataIndex);
-        	//$(this).addClass("on").siblings().removeClass("on");
+        $(".nav-list .nav-con ul li").on("click",function(){
+        	$(this).addClass("on").siblings().removeClass("on");
+        	var dataIndex=$(this).find("a").attr("data-index");
+        	$(".J_mainContent .J_iframe").attr("src",dataIndex);
         })
 
-        $(".warpper .sidebar-collapse ul li .list dl dd").on("mouseover",function(e){
-        	$(this).addClass("active").siblings().removeClass("active");
-        })
-
-        $(".warpper .sidebar-collapse ul li .list dl dd").on("click",function(e){
-        	e.stopPropagation();
-        	var dataId=$(this).find("a").attr('data-id');
-        	$("#content-main iframe").attr("src",dataId);
-        })
-
-  
-
+        getMyTime();
     });
+</script>
+<script>
+	//前面补0
+    function p(n){return n<10?'0'+n:n;}
+	//当前时间
+	function getMyTime(){
+        var myDate=new Date();
+        var year=myDate.getFullYear();
+        var month=myDate.getMonth()+1;
+        var day=myDate.getDate();
+        var week=myDate.getDay();
+        var array=['周日','周一','周二','周三','周四','周五','周六',];
+        var hour=myDate.getHours();
+        var minute=myDate.getMinutes();
+        var second=myDate.getSeconds();
+        document.getElementById('date').innerHTML=year+'/'+month;
+        document.getElementById('day').innerHTML=day;
+        document.getElementById('week').innerHTML=array[week];
+        document.getElementById('time').innerHTML=p(hour)+':'+p(minute)+':'+p(second);
+        setTimeout('getMyTime()',500);
+    }
 </script>
 <!-- script end -->
 </html>

@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv=”X-UA-Compatible” content="IE=edge,chrome=1"/>   
+	<meta name=”description” content=""/>       
+	<meta name=”keywords” content=""/>      
+	<meta name=”author” content="name, bandow"/>         
+	<title>pms</title>
+	<link rel="stylesheet" href="styles/room-state.css">
+</head>
+<body>
+	<div class="warpper" id="wrapper">
+		<div class="header">
+			<div class="title arrow-bottom">
+				<i></i>
+				<h2>房态图</h2>
+			</div>
+			<div class="select arrow-bottom">
+				<select>
+					<option>房型筛选</option>
+					<option>房型筛选1</option>
+					<option>房型筛选2</option>
+				</select>
+			</div>
+			<div class="search">
+				<input type="text" placeholder="查找/房号">
+				<i></i>
+			</div>
+			<div class="select-list">
+				<ul>
+					<li data-type="live">
+						<p>脏房</p>
+						<div class="btn on"></div>
+					</li>
+					<li>
+						<p>停售</p>
+						<div class="btn"></div>
+					</li>
+					<li>
+						<p>在住</p>
+						<div class="btn"></div>
+					</li>
+					<li>
+						<p>干净</p>
+						<div class="btn"></div>
+					</li>
+					<li>
+						<p>检查</p>
+						<div class="btn"></div>
+					</li>
+					<li>
+						<p>预离</p>
+						<div class="btn"></div>
+					</li>
+					<li>
+						<p>欠费</p>
+						<div class="btn"></div>
+					</li>
+					 <li>
+						<p>排房</p>
+						<div class="btn"></div>
+					</li>
+					<li>
+						<p>内部房</p>
+						<div class="btn"></div>
+					</li>
+					<li>
+						<p>关联房</p>
+						<div class="btn"></div>
+					</li>                                              
+				</ul>
+			</div>
+			<a href="javascript:;" class="right-btn">
+				<i></i>
+				<p>刷新房态</p>
+			</a>
+		</div>
+		<div class="room-state-content">
+			<div class="left">
+				<dl>
+					<dd data-index="all" class="on">All</dd>
+					<dd data-index="8">8F</dd>
+					<dd data-index="7">7F</dd>
+					<dd data-index="6">6F</dd>
+					<dd data-index="5">5F</dd>
+					<dd data-index="4">4F</dd>
+					<dd data-index="3">3F</dd>
+					<dd data-index="2">2F</dd>
+					<dd data-index="1">1F</dd>
+				</dl>
+			</div>
+			<div class="right">
+				<div class="right-m">
+					<ul>
+						<li class="live" data-id="1">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>1001</em></div>
+						</li>
+						<li class="live" data-id="2">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>2001</em></div>
+						</li>
+						<li class="live" data-id="3">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>3003</em></div>
+						</li>
+						<li class="live" data-id="4">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>4004</em></div>
+						</li>
+						<li class="live" data-id="5">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>5001</em></div>
+						</li>
+						<li class="live" data-id="6">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>6001</em></div>
+						</li>
+						<li class="live" data-id="7">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>7001</em></div>
+						</li>
+						<li class="live" data-id="8">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="live" data-id="8">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="hour-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="live" data-id="8">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="room-icon"><i>內</i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="clean" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="room-icon"><i>排</i></div>
+								<div class="room-icon"><i>联</i></div>
+								<div class="room-icon"><i>免</i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="clean" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="secrecy-icon"><i></i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="clean" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon"></div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="stop" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="stop-icon"><i></i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="cleaning" data-id="8">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="cleaning-icon"><i></i></div>
+								<div class="arrear-icon"><i>¥</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="cleaning" data-id="8">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="inspect-icon"><i>查</i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="dirty" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="dirty-icon"><i></i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="dirty" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="dirty-icon"><i></i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="dirty" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="dirty-icon"><i></i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="live" data-id="8">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="live" data-id="8">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="hour-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="live" data-id="8">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="room-icon"><i>內</i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="clean" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="room-icon"><i>排</i></div>
+								<div class="room-icon"><i>联</i></div>
+								<div class="room-icon"><i>免</i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="clean" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="secrecy-icon"><i></i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="clean" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon"></div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="stop" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="stop-icon"><i></i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="cleaning" data-id="8">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="cleaning-icon"><i></i></div>
+								<div class="arrear-icon"><i>¥</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="cleaning" data-id="8">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="inspect-icon"><i>查</i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="dirty" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="dirty-icon"><i></i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="dirty" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="dirty-icon"><i></i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="dirty" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="dirty-icon"><i></i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="live" data-id="1">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>1001</em></div>
+						</li>
+						<li class="live" data-id="2">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>2001</em></div>
+						</li>
+						<li class="live" data-id="3">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>3003</em></div>
+						</li>
+						<li class="live" data-id="4">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>4004</em></div>
+						</li>
+						<li class="live" data-id="5">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>5001</em></div>
+						</li>
+						<li class="live" data-id="6">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>6001</em></div>
+						</li>
+						<li class="live" data-id="7">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>7001</em></div>
+						</li>
+						<li class="live" data-id="8">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="live" data-id="8">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="hour-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="live" data-id="8">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="room-icon"><i>內</i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="clean" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="room-icon"><i>排</i></div>
+								<div class="room-icon"><i>联</i></div>
+								<div class="room-icon"><i>免</i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="clean" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="secrecy-icon"><i></i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="clean" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon"></div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="stop" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="stop-icon"><i></i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="cleaning" data-id="8">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="cleaning-icon"><i></i></div>
+								<div class="arrear-icon"><i>¥</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="cleaning" data-id="8">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="inspect-icon"><i>查</i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="dirty" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="dirty-icon"><i></i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="dirty" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="dirty-icon"><i></i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="dirty" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="dirty-icon"><i></i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="live" data-id="8">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="live" data-id="8">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="hour-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="live" data-id="8">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="room-icon"><i>內</i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="clean" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="room-icon"><i>排</i></div>
+								<div class="room-icon"><i>联</i></div>
+								<div class="room-icon"><i>免</i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="clean" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="secrecy-icon"><i></i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="clean" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon"></div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="stop" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="stop-icon"><i></i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="cleaning" data-id="8">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="cleaning-icon"><i></i></div>
+								<div class="arrear-icon"><i>¥</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="cleaning" data-id="8">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="inspect-icon"><i>查</i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="dirty" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="dirty-icon"><i></i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="dirty" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="dirty-icon"><i></i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="dirty" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="dirty-icon"><i></i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="live" data-id="1">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>1001</em></div>
+						</li>
+						<li class="live" data-id="2">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>2001</em></div>
+						</li>
+						<li class="live" data-id="3">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>3003</em></div>
+						</li>
+						<li class="live" data-id="4">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>4004</em></div>
+						</li>
+						<li class="live" data-id="5">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>5001</em></div>
+						</li>
+						<li class="live" data-id="6">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>6001</em></div>
+						</li>
+						<li class="live" data-id="7">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>7001</em></div>
+						</li>
+						<li class="live" data-id="8">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="live" data-id="8">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="hour-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="live" data-id="8">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="room-icon"><i>內</i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="clean" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="room-icon"><i>排</i></div>
+								<div class="room-icon"><i>联</i></div>
+								<div class="room-icon"><i>免</i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="clean" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="secrecy-icon"><i></i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="clean" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon"></div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="stop" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="stop-icon"><i></i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="cleaning" data-id="8">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="cleaning-icon"><i></i></div>
+								<div class="arrear-icon"><i>¥</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="cleaning" data-id="8">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="inspect-icon"><i>查</i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="dirty" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="dirty-icon"><i></i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="dirty" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="dirty-icon"><i></i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="dirty" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="dirty-icon"><i></i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="live" data-id="8">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="live" data-id="8">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="hour-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="live" data-id="8">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="vip-icon"><i>V</i></div>
+								<div class="room-icon"><i>內</i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="clean" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="room-icon"><i>排</i></div>
+								<div class="room-icon"><i>联</i></div>
+								<div class="room-icon"><i>免</i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="clean" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="secrecy-icon"><i></i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="clean" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon"></div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="stop" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="stop-icon"><i></i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="cleaning" data-id="8">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="cleaning-icon"><i></i></div>
+								<div class="arrear-icon"><i>¥</i></div>
+								<div class="leave-icon"><i></i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="cleaning" data-id="8">
+							<div class="name"><h5>韩先生</h5></div>
+							<div class="icon">
+								<div class="inspect-icon"><i>查</i></div>
+							</div>
+							<div class="number"><span>-1376</span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="dirty" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="dirty-icon"><i></i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="dirty" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="dirty-icon"><i></i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+						<li class="dirty" data-id="8">
+							<div class="name"><h5></h5></div>
+							<div class="icon">
+								<div class="dirty-icon"><i></i></div>
+							</div>
+							<div class="number"><span></span></div>	
+							<div class="sdk"><span>SDK</span><em>8001</em></div>
+						</li>
+					</ul>
+				</div>
+			</div> 
+		</div>
+		<div class="footer">
+			<ul>
+				<li>
+					<i class="i1"></i>
+					<p>在住</p>
+				</li>
+				<li>
+					<i class="i2"></i>
+					<p>干净</p>
+				</li>
+				<li>
+					<i class="i3"></i>
+					<p>脏房</p>
+				</li>
+				<li>
+					<i class="i4"></i>
+					<p>停售</p>
+				</li>
+				<li>
+					<i class="i5"></i>
+					<p>清洁</p>
+				</li>
+				<li>
+					<i class="i6"></i>
+					<p>检查</p>
+				</li>
+				<li>
+					<i class="i7"></i>
+					<p>保密</p>
+				</li>
+				<li>
+					<i class="i8"></i>
+					<p>钟点</p>
+				</li>
+				<li>
+					<i class="i9"></i>
+					<p>VIP</p>
+				</li>
+				<li>
+					<i class="i10"></i>
+					<p>预离</p>
+				</li>
+				<li>
+					<i class="i11"></i>
+					<p>欠费</p>
+				</li>
+				<li>
+					<i class="i12"></i>
+					<p>排房</p>
+				</li>
+				<li>
+					<i class="i13"></i>
+					<p>内部房</p>
+				</li>
+				<li>
+					<i class="i14"></i>
+					<p>关联房</p>
+				</li> 
+				<li>
+					<i class="i15"></i>
+					<p>免费房</p>
+				</li>                                                
+			</ul>
+			<p>©1999 - 2017 深圳市二十四度科技有限公司, Inc or its affiliates. All Rights R</p>
+		</div>
+	</div>
+</body>
+<!-- script begin -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script>
+	$(document).ready(function(){
+        
+		$(".room-state-content .right .right-m ul li").on("click",function(){
+			$(this).addClass("select").siblings().removeClass("select");
+		});
+
+		$(".room-state-content .left dl dd").on("click",function(){
+			$(this).addClass("on").siblings().removeClass("on");
+			var dataIndex=$(this).attr("data-index");
+			$(".room-state-content .right .right-m ul li").hide();
+			$('.room-state-content .right .right-m ul li[data-id="'+dataIndex+'"]').show();	
+			if(dataIndex=='all'){
+				$(".room-state-content .right .right-m ul li").show();
+			}
+		});
+
+		$(".header .select-list ul li .btn").on("click",function(){
+			$(this).toggleClass("on");
+			var dataType=$(this).parent().attr("data-type");
+			if(!$(this).hasClass("on")){
+				$('.room-state-content .right .right-m ul li[class="'+dataType+'"]').hide();
+			}else{
+				$('.room-state-content .right .right-m ul li[class="'+dataType+'"]').show();	
+			}
+		});
+
+		$(".room-state-content .right").slimScroll({
+            height: '530px'
+        });
+	});
+</script>
+<!-- script end -->
+</html>
