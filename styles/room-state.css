@@ -270,12 +270,22 @@ body, #wrapper, html {
   background-color: #edf2f8;
   margin: 0 10px 10px 0;
   cursor: pointer; }
+.room-state-content .right .right-m ul li .name {
+  overflow: hidden;
+  height: 30px; }
 .room-state-content .right .right-m ul li .name h5 {
-  height: 24px;
+  float: left;
+  height: 30px;
   color: #fff;
-  font: 14px/24px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif; }
+  font: 16px/30px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif; }
+.room-state-content .right .right-m ul li .name span {
+  font: 14px/30px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+  float: right;
+  color: #fff; }
 .room-state-content .right .right-m ul li .icon {
-  height: 20px; }
+  overflow: hidden;
+  height: 20px;
+  margin: 5px 0; }
 .room-state-content .right .right-m ul li .icon > div {
   float: left;
   margin-left: 5px;
@@ -284,97 +294,48 @@ body, #wrapper, html {
   height: 20px;
   border-radius: 100%; }
 .room-state-content .right .right-m ul li .icon > div i {
+  width: 20px;
+  height: 20px;
   display: block;
-  background: url("../images/3body_icon.png") no-repeat; }
-.room-state-content .right .right-m ul li .icon .vip-icon {
-  background-color: #e2c500; }
+  background: url("../images/pms_icon.png") no-repeat; }
 .room-state-content .right .right-m ul li .icon .vip-icon i {
-  font-style: inherit;
-  color: #fff;
-  font: 12px/20px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
-  text-align: center;
-  background: none; }
-.room-state-content .right .right-m ul li .icon .leave-icon {
-  background-color: #fde01f; }
+  background-position: -283px 0; }
 .room-state-content .right .right-m ul li .icon .leave-icon i {
-  margin: 5px 0 0 3px;
-  width: 14px;
-  height: 9px;
-  background-position: -415px -43px; }
-.room-state-content .right .right-m ul li .icon .stop-icon {
-  background-color: #fd621f; }
+  background-position: -307px 0; }
 .room-state-content .right .right-m ul li .icon .stop-icon i {
-  margin: 2px 0 0 3px;
-  width: 15px;
-  height: 16px;
-  background-position: -347px -43px; }
-.room-state-content .right .right-m ul li .icon .cleaning-icon {
-  background-color: #62b3b6; }
+  background-position: -160px 0; }
 .room-state-content .right .right-m ul li .icon .cleaning-icon i {
-  margin: 5px 0 0 3px;
-  width: 12px;
-  height: 12px;
-  background-position: -366px -43px; }
-.room-state-content .right .right-m ul li .icon .arrear-icon {
-  background-color: #d63c6e; }
+  background-position: -184px 0; }
 .room-state-content .right .right-m ul li .icon .arrear-icon i {
-  font-style: inherit;
-  color: #fff;
-  font: 12px/20px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
-  text-align: center;
-  background: none; }
-.room-state-content .right .right-m ul li .icon .inspect-icon {
-  background-color: #ffa308; }
+  background-position: -332px 0; }
 .room-state-content .right .right-m ul li .icon .inspect-icon i {
-  font-style: inherit;
-  color: #fff;
-  font: 12px/20px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
-  text-align: center;
-  background: none; }
-.room-state-content .right .right-m ul li .icon .dirty-icon {
-  background-color: #959ea7; }
+  background-position: -210px 0; }
 .room-state-content .right .right-m ul li .icon .dirty-icon i {
-  margin: 2px 0 0 4px;
-  width: 12px;
-  height: 16px;
-  background-position: -331px -43px; }
-.room-state-content .right .right-m ul li .icon .hour-icon {
-  background-color: #b65ece; }
+  background-position: -135px 0; }
 .room-state-content .right .right-m ul li .icon .hour-icon i {
-  margin: 2px 0 0 3px;
-  width: 14px;
-  height: 15px;
-  background-position: -397px -43px; }
-.room-state-content .right .right-m ul li .icon .room-icon {
-  background-color: #98aed3; }
-.room-state-content .right .right-m ul li .icon .room-icon i {
-  font-style: inherit;
-  color: #fff;
-  font: 12px/20px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
-  text-align: center;
-  background: none; }
-.room-state-content .right .right-m ul li .icon .secrecy-icon {
-  background-color: #9ea7b1; }
+  background-position: -258px 0; }
 .room-state-content .right .right-m ul li .icon .secrecy-icon i {
-  margin: 3px 0 0 4px;
-  width: 12px;
-  height: 13px;
-  background-position: -382px -43px; }
+  background-position: -234px 0; }
+.room-state-content .right .right-m ul li .icon .room-icon1 i {
+  background-position: -359px 0; }
+.room-state-content .right .right-m ul li .icon .room-icon2 i {
+  background-position: -385px 0; }
+.room-state-content .right .right-m ul li .icon .room-icon3 i {
+  background-position: -411px 0; }
+.room-state-content .right .right-m ul li .icon .room-icon4 i {
+  background-position: -435px 0; }
 .room-state-content .right .right-m ul li .number {
   height: 24px;
   color: #fff;
   font: 14px/24px "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
-  text-align: right; }
+  text-align: left; }
 .room-state-content .right .right-m ul li .sdk {
   overflow: hidden;
   color: #fff;
-  font: 14px/1.2 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif; }
-.room-state-content .right .right-m ul li .sdk span {
-  margin-top: 3px;
-  float: left; }
+  font: 20px/1.2 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif; }
 .room-state-content .right .right-m ul li .sdk em {
   float: right;
-  font-size: 18px; }
+  font-size: 20px; }
 .room-state-content .right .right-m ul li.select {
   color: #000;
   opacity: 0.5;

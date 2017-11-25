@@ -242,14 +242,24 @@ body, #wrapper, html {
 					margin:0 10px 10px 0;
 					cursor:pointer;
 					.name{
+						overflow: hidden;
+						height:30px;
 						h5{
-							height:24px;
+							float:left;
+							height:30px;
 							color:#fff;
-							font:14px/24px $publicFont;
+							font:16px/30px $publicFont;
+						}
+						span{
+							font:14px/30px $publicFont;
+							float:right;
+							color:#fff;
 						}
 					}
 					.icon{
+						overflow: hidden;
 						height:20px;
+						margin:5px 0;
 						>div{
 							float:left;
 							margin-left:5px;
@@ -258,123 +268,44 @@ body, #wrapper, html {
 							height:20px;
 							border-radius:100%;
 							i{
-								display: block;
-								background:url("../images/3body_icon.png") no-repeat;
+								width:20px;
+								height:20px;
+								display:block;
+								background:url("../images/pms_icon.png") no-repeat;
 							}
 							
 						}
-						.vip-icon{
-							background-color:#e2c500;
-							i{
-								font-style:inherit;
-								color:#fff;
-								font:12px/20px $publicFont;
-								text-align:center;
-								background:none;
-							}
-						}
-						.leave-icon{
-							background-color:#fde01f;
-							i{
-								margin:5px 0 0 3px;
-								width:14px;
-								height:9px;
-								background-position:-415px -43px;
-							}
-						}
-						.stop-icon{
-							background-color:#fd621f;
-							i{
-								margin:2px 0 0 3px;
-								width:15px;
-								height:16px;
-								background-position:-347px -43px;
-							}
-						}
-						.cleaning-icon{
-							background-color:#62b3b6;
-							i{
-								margin:5px 0 0 3px;
-								width:12px;
-								height:12px;
-								background-position:-366px -43px;
-							}
-						}
-						.arrear-icon{
-							background-color:#d63c6e;
-							i{
-								font-style:inherit;
-								color:#fff;
-								font:12px/20px $publicFont;
-								text-align:center;
-								background:none;
-							}
-						}
-						.inspect-icon{
-							background-color:#ffa308;
-							i{
-								font-style:inherit;
-								color:#fff;
-								font:12px/20px $publicFont;
-								text-align:center;
-								background:none;
-							}
-						}
-						.dirty-icon{
-							background-color:#959ea7;
-							i{
-								margin:2px 0 0 4px;
-								width:12px;
-								height:16px;
-								background-position:-331px -43px;
-							}
-						}
-						.hour-icon{
-							background-color:#b65ece;
-							i{
-								margin:2px 0 0 3px;
-								width:14px;
-								height:15px;
-								background-position:-397px -43px;
-							}
-						}
-						.room-icon{
-							background-color:#98aed3;
-							i{
-								font-style:inherit;
-								color:#fff;
-								font:12px/20px $publicFont;
-								text-align:center;
-								background:none;
-							}
-						}
-						.secrecy-icon{
-							background-color:#9ea7b1;
-							i{
-								margin:3px 0 0 4px;
-								width:12px;
-								height:13px;
-								background-position:-382px -43px;
-							}
-						}
+						.vip-icon{i{background-position:-283px 0;}}
+						.leave-icon{i{background-position:-307px 0;}}
+						.stop-icon{i{background-position:-160px 0;}}
+						.cleaning-icon{i{background-position:-184px 0;}}
+						.arrear-icon{i{background-position:-332px 0;}}
+						.inspect-icon{i{background-position:-210px 0;}}
+						.dirty-icon{i{background-position:-135px 0;}}
+						.hour-icon{i{background-position:-258px 0;}}
+						.secrecy-icon{i{background-position:-234px 0;}}
+						.room-icon1{i{background-position:-359px 0;}}
+						.room-icon2{i{background-position:-385px 0;}}
+						.room-icon3{i{background-position:-411px 0;}}
+						.room-icon4{i{background-position:-435px 0;}}
 					}
 					.number{
 						height:24px;
 						color:#fff;
 						font:14px/24px $publicFont;
-						text-align:right;
+						text-align:left;
 					}
 					.sdk{
 						overflow:hidden;
 						color:#fff;
-						font:14px/1.2 $publicFont;
-						span{
-							margin-top:3px;
-							float:left;
-						}
+						font:20px/1.2 $publicFont;
+						// span{
+						// 	margin-top:3px;
+						// 	float:left;
+						// }
 						em{
 							float:right;
-							font-size:18px;
+							font-size:20px;
 						}
 					}
 				}
